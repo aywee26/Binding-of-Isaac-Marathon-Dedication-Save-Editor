@@ -10,14 +10,14 @@ namespace Isaac_Achievement_Unlocker
         public List<string> SaveFileUsers = new List<string>();
         public List<SaveFile> SaveFileList = new List<SaveFile> { new SaveFile(), new SaveFile(), new SaveFile() };
         private readonly string MyDocumentsName = System.Security.Principal.WindowsIdentity.GetCurrent().Name + " - My Document Saves";
-        private readonly string IsaacFileSaveLocation = @"\My Games\Binding of Isaac Afterbirth+";
+        private readonly string IsaacFileSaveLocation = @"\My Games\Binding of Isaac Repentance";
         private string DocumentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         private string SaveLocation { get; set; }
         private string SteamIsaacFileSaveLocation = @"\250900\remote";
         private Dictionary<string, string> SteamUserProfiles { get; set; }
-        private List<string> saveFileNames = new List<string> { "abp_persistentgamedata1.dat",
-                                                                "abp_persistentgamedata2.dat",
-                                                                "abp_persistentgamedata3.dat" };
+        private List<string> saveFileNames = new List<string> { "rep_persistentgamedata1.dat",
+                                                                "rep_persistentgamedata2.dat",
+                                                                "rep_persistentgamedata3.dat" };
 
         public IsaacFileLocator()
         {
