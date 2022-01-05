@@ -1,12 +1,14 @@
 # Binding-of-Isaac-Marathon-Dedication-Save-Editor
-Binding of Isaac Marathon/Dedication Save Editor
+A program that modifies TBOI Afterbirth+ ([afterbirthplus](https://github.com/aywee26/Binding-of-Isaac-Marathon-Dedication-Save-Editor/tree/afterbirthplus) branch) or Repentance ([master](https://github.com/aywee26/Binding-of-Isaac-Marathon-Dedication-Save-Editor/tree/master) branch) save files
 
-v1.0
+and unlocks Dedication and The Marathon achievements.
 
-Created by wkantz
-
-Isaac Checksum File Generation by bladecoding
-
-Darkbum .ico File made by underpieces
-
+# Screenshot
 ![Screenshot](http://i.imgur.com/NRhWb49.png "Screenshot")
+
+# Credits
+wkantz - creation of the project
+
+bladecoding - checksum generation
+
+underpieces - icon file
