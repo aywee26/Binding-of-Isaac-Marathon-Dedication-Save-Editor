@@ -163,25 +163,27 @@ namespace Isaac_Achievement_Unlocker
                 {
                     if (!File.Exists(userdir + "//Config//localconfig.vdf"))
                         continue;
-                    string quoted = string.Format("\"{0}\"", userdir.Substring(userdir.LastIndexOf('\\') + 1));
-                    using (StreamReader reader = new StreamReader(userdir + "//Config//localconfig.vdf"))
-                    {
-                        while (!reader.ReadLine().Trim().EndsWith(quoted)) { }
-                        reader.ReadLine();
-                        string line = reader.ReadLine().Trim();
-                        while (!line.EndsWith("}"))
-                        {
-                            if (line.StartsWith("\"Name\"", StringComparison.InvariantCultureIgnoreCase))
-                            {
-                                line = line.Substring(6).Trim();
-                                line = line.Substring(1, line.Length - 2);
-                                LookupTable.Add(line, new DirectoryInfo(steampath + userdir.Substring(userdir.LastIndexOf('\\'))).FullName);
-                                reader.Close();
-                                break;
-                            }
-                            line = reader.ReadLine().Trim();
-                        }
-                    }
+
+                    LookupTable.Add(userdir.Substring(userdir.LastIndexOf('\\') + 1), userdir);
+                    //string quoted = string.Format("\"{0}\"", userdir.Substring(userdir.LastIndexOf('\\') + 1));
+                    //using (StreamReader reader = new StreamReader(userdir + "//Config//localconfig.vdf"))
+                    //{
+                    //    while (!reader.ReadLine().Trim().EndsWith(quoted)) { }
+                    //    reader.ReadLine();
+                    //    string line = reader.ReadLine().Trim();
+                    //    while (!line.EndsWith("}"))
+                    //    {
+                    //        if (line.StartsWith("\"Name\"", StringComparison.InvariantCultureIgnoreCase))
+                    //        {
+                    //            line = line.Substring(6).Trim();
+                    //            line = line.Substring(1, line.Length - 2);
+                    //            LookupTable.Add(line, new DirectoryInfo(steampath + userdir.Substring(userdir.LastIndexOf('\\'))).FullName);
+                    //            reader.Close();
+                    //            break;
+                    //        }
+                    //        line = reader.ReadLine().Trim();
+                    //    }
+                    //}
                 }
             }
             catch (Exception e)
